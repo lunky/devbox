@@ -1,3 +1,10 @@
+<#
+    Start Windows PowerShell with the "Run as Administrator" option. Only members of the Administrators group on the computer can change the execution policy.
+    Enable running unsigned scripts by entering:
+    `set-executionpolicy remotesigned`
+	This will allow running unsigned scripts that you write on your local computer and signed scripts from Internet.
+#>
+
 $currentPrincipal = New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())
 if(!$currentPrincipal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
 	"You must run this script as an admin"
@@ -18,9 +25,10 @@ choco install yarn
 #choco install datagrip
 #choco install intellijidea-ultimate
 choco install postman
-# choco install 7zip.install
+choco install 7zip.install
 # choco install microsoft-teams
 choco install notepadplusplus
+choco install vim 
 
 "Installing and setting up vscode"
 choco install vscode
