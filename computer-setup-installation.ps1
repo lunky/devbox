@@ -29,6 +29,8 @@ choco install 7zip.install
 # choco install microsoft-teams
 choco install notepadplusplus
 choco install vim 
+choco install stack
+choco install ghc
 
 "Installing and setting up vscode"
 choco install vscode
